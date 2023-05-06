@@ -1,0 +1,37 @@
+<!-- index.html with form -->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script> 
+</head>
+<body>
+<div class="content">
+<h1>Cancer Cell Drug Predictor</h1>
+
+<div class="input-output-area">
+<form method="POST" action="/predict" onsubmit="return validateForm()">
+    <br>
+    Directly Input: 
+    <br>
+    <label>Drug: </label>
+    <input name="drug" id="drug">
+    <label>Cancer Cell: </label>  
+    <input name="cell" id="cell">
+    <br>
+    Upload files:
+    <br>
+    <label>Upload Drug Data: </label> 
+    <input type="file" name="drug_file"> 
+    <label>Upload Cell Data: </label>
+    <input type="file" name="cell_file">
+    <button type="submit">Submit</button>
+
+    <!-- Link to request file download -->
+    <a href="/predict?file_download=1">Request File Download</a> 
+</form>   
+
+</div>
+</div>
+</body>
+</html>
